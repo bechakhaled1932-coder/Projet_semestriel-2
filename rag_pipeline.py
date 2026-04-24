@@ -1,16 +1,20 @@
-from langchain_community.embeddings import HuggingFaceEmbeddings
+import os
+from dotenv import load_dotenv
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain_ollama import OllamaLLM
+from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-# === Configuration ===
-VECTORDB_DIR = "vectordb"
-EMBED_MODEL  = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-LLM_MODEL    = "mistral"
+load_dotenv()
 
-# === Prompt personnalisé ENISo ===
+# === Configuration ===
+VECTORDB_DIR  = "vectordb"
+EMBED_MODEL   = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+GROQ_API_KEY  = os.getenv("GROQ_API_KEY")
+
+# === Prompt ENISo ===
 PROMPT_TEMPLATE = """
 Tu es un assistant administratif de l'ENISo (École Nationale d'Ingénieurs de Sousse).
 Tu aides les étudiants à trouver des informations sur les procédures administratives,
@@ -44,8 +48,12 @@ def load_rag_chain():
         search_kwargs={"k": 3}
     )
 
-    print("⏳ Chargement du LLM Mistral...")
-    llm = OllamaLLM(model=LLM_MODEL)
+    print("⏳ Chargement du LLM Groq...")
+    llm = ChatGroq(
+        api_key=GROQ_API_KEY,
+        model_name="llama-3.3-70b-versatile",
+        temperature=0
+    )
 
     prompt = PromptTemplate(
         template=PROMPT_TEMPLATE,

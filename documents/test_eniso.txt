@@ -1,4 +1,4 @@
-﻿GUIDE ADMINISTRATIF ENISo - Document de test
+GUIDE ADMINISTRATIF ENISo - Document de test
 
 === INSCRIPTION ET RÉINSCRIPTION ===
 Pour s'inscrire à l'ENISo, l'étudiant doit fournir :

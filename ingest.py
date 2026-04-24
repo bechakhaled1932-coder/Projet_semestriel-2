@@ -1,7 +1,7 @@
 import os
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 
 # === Configuration ===
@@ -39,7 +39,7 @@ def split_documents(docs):
     return chunks
 
 def create_vectordb(chunks):
-    print("⏳ Génération des embeddings (1-2 min)...")
+    print("⏳ Génération des embeddings...")
     embeddings = HuggingFaceEmbeddings(model_name=EMBED_MODEL)
     db = Chroma.from_documents(
         documents=chunks,
