@@ -1,5 +1,5 @@
 import os
-from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
+from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -20,6 +20,10 @@ def load_documents():
         elif filename.endswith(".docx"):
             print(f"📄 Chargement Word : {filename}")
             loader = Docx2txtLoader(filepath)
+            docs.extend(loader.load())
+        elif filename.endswith(".txt"):
+            print(f"📄 Chargement TXT : {filename}")
+            loader = TextLoader(filepath, encoding="utf-8")
             docs.extend(loader.load())
     print(f"✅ {len(docs)} pages chargées au total")
     return docs

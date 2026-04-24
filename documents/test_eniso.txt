@@ -1,0 +1,34 @@
+﻿GUIDE ADMINISTRATIF ENISo - Document de test
+
+=== INSCRIPTION ET RÉINSCRIPTION ===
+Pour s'inscrire à l'ENISo, l'étudiant doit fournir :
+- Une copie de la carte d'identité nationale
+- Les relevés de notes du baccalauréat
+- Une photo d'identité récente
+- Le reçu de paiement des frais d'inscription
+
+La réinscription se fait chaque année au début de septembre.
+L'étudiant doit se présenter au service de scolarité avec son relevé de notes.
+
+=== STAGES ===
+Le stage d'été est obligatoire pour tous les étudiants de 2ème année.
+La durée minimale du stage est de 4 semaines.
+L'étudiant doit déposer sa convention de stage au service des stages.
+Le rapport de stage doit être remis avant le 30 septembre.
+
+=== PFE (Projet de Fin d'Études) ===
+Le PFE est obligatoire en 3ème année d'ingénieur.
+L'étudiant choisit son sujet en accord avec un encadrant académique.
+La soutenance du PFE a lieu en juin.
+Le rapport final doit être déposé 2 semaines avant la soutenance.
+
+=== EMPLOI DU TEMPS ===
+Les emplois du temps sont affichés sur le portail ENISo.
+Les cours commencent à 8h00 et se terminent à 18h00.
+Les séances de TD durent 1h30.
+Les séances de TP durent 3h00.
+
+=== CONTACTS UTILES ===
+Scolarité : scolarite@eniso.u-sousse.tn
+Stages : stages@eniso.u-sousse.tn
+Direction : direction@eniso.u-sousse.tn
