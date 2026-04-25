@@ -19,13 +19,14 @@ def setup():
     vectordb_dir = "vectordb"
     if not os.path.exists(vectordb_dir) or not os.listdir(vectordb_dir):
         st.info("⏳ Initialisation de la base de connaissances...")
-        docs   = load_documents()
+        docs = load_documents()
+        st.write(f"📄 {len(docs)} documents chargés")
         chunks = split_documents(docs)
+        st.write(f"✂️ {len(chunks)} chunks créés")
         create_vectordb(chunks)
+        st.write("✅ Base vectorielle créée")
     chain, retriever = load_rag_chain()
     return chain, retriever
-
-chain, retriever = setup()
 
 # === Historique de conversation ===
 if "messages" not in st.session_state:
