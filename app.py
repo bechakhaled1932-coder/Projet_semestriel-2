@@ -1,4 +1,6 @@
+import os
 import streamlit as st
+from ingest import load_documents, split_documents, create_vectordb
 from rag_pipeline import load_rag_chain, ask
 
 # === Configuration de la page ===
@@ -11,13 +13,19 @@ st.set_page_config(
 st.title("🎓 Assistant Administratif ENISo")
 st.caption("Posez vos questions sur les procédures administratives, stages, PFE et emplois du temps.")
 
-# === Chargement du RAG (une seule fois) ===
+# === Ingestion automatique si vectordb vide ===
 @st.cache_resource
-def get_chain():
+def setup():
+    vectordb_dir = "vectordb"
+    if not os.path.exists(vectordb_dir) or not os.listdir(vectordb_dir):
+        st.info("⏳ Initialisation de la base de connaissances...")
+        docs   = load_documents()
+        chunks = split_documents(docs)
+        create_vectordb(chunks)
     chain, retriever = load_rag_chain()
     return chain, retriever
 
-chain, retriever = get_chain()
+chain, retriever = setup()
 
 # === Historique de conversation ===
 if "messages" not in st.session_state:
@@ -31,18 +39,15 @@ for msg in st.session_state.messages:
 # === Zone de saisie ===
 if question := st.chat_input("Posez votre question..."):
 
-    # Afficher la question
     with st.chat_message("user"):
         st.markdown(question)
     st.session_state.messages.append({"role": "user", "content": question})
 
-    # Générer la réponse
     with st.chat_message("assistant"):
         with st.spinner("⏳ Recherche en cours..."):
             answer, sources = ask(chain, retriever, question)
         st.markdown(answer)
 
-        # Afficher les sources
         if sources:
             with st.expander("📄 Sources utilisées"):
                 for i, doc in enumerate(sources):
