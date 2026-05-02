@@ -12,7 +12,9 @@ load_dotenv()
 # === Configuration ===
 VECTORDB_DIR  = "vectordb"
 EMBED_MODEL   = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-GROQ_API_KEY  = os.getenv("GROQ_API_KEY")
+import streamlit as st
+load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
 
 # === Prompt ENISo ===
 PROMPT_TEMPLATE = """
