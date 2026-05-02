@@ -4,152 +4,216 @@ def set_page_config():
     st.set_page_config(
         page_title="Assistant ENISo",
         page_icon="🎓",
-        layout="centered"
+        layout="wide"
     )
 
 def load_css():
     st.markdown("""
     <style>
-        .stApp {
-            background-color: #f0f4f8;
-        }
+        /* Fond général */
+        .stApp { background-color: #f0f4f8; }
+
+        /* Cacher menu streamlit */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+
+        /* Header */
         .eniso-header {
-            background: linear-gradient(135deg, #1a2f5e 0%, #4a9fd4 100%);
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(26, 47, 94, 0.3);
+            background: #1a2f5e;
+            padding: 20px 24px 16px;
+            border-radius: 12px;
+            margin-bottom: 14px;
         }
-        .eniso-header h1 {
-            color: white;
-            font-size: 28px;
+        .eniso-header-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+        .eniso-logo-circle {
+            width: 52px;
+            height: 52px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .eniso-logo-inner {
+            font-size: 12px;
             font-weight: 700;
-            margin: 10px 0 5px 0;
+            color: #1a2f5e;
+            letter-spacing: 1px;
         }
-        .eniso-header p {
-            color: #cce4f7;
-            font-size: 14px;
+        .eniso-header-titles h1 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
             margin: 0;
         }
-        .eniso-logo-text {
-            font-size: 42px;
-            font-weight: 900;
-            color: white;
-            letter-spacing: 3px;
+        .eniso-header-titles p {
+            color: #a8d4f0;
+            font-size: 12px;
+            margin: 4px 0 0 0;
         }
-        .eniso-logo-text span {
-            color: #4a9fd4;
-        }
-        .lang-badges {
+        .eniso-lang-row {
             display: flex;
-            justify-content: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-top: 12px;
         }
-        .lang-badge {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-        .stChatMessage {
-            border-radius: 12px;
-            margin-bottom: 10px;
-        }
-        .stChatInputContainer {
-            border-top: 2px solid #4a9fd4;
-            padding-top: 10px;
-        }
-        .streamlit-expanderHeader {
-            background-color: #e8f4fd;
-            border-radius: 8px;
-            color: #1a2f5e;
-        }
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .stat-card {
-            background: white;
-            border-left: 4px solid #4a9fd4;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            flex: 1;
-        }
-        .stat-card .number {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1a2f5e;
-        }
-        .stat-card .label {
+        .eniso-lang-pill {
+            background: rgba(255,255,255,0.15);
+            color: #ffffff;
             font-size: 11px;
-            color: #888;
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 0.5px solid rgba(255,255,255,0.35);
         }
-        .eniso-footer {
-            text-align: center;
-            color: #aaa;
-            font-size: 12px;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
+
+        /* Stats */
+        .eniso-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 14px;
         }
+        .eniso-stat {
+            background: white;
+            border-radius: 8px;
+            padding: 10px 14px;
+            border-left: 3px solid #4a9fd4;
+            border-top: 0.5px solid #ccc;
+            border-right: 0.5px solid #ccc;
+            border-bottom: 0.5px solid #ccc;
+        }
+        .eniso-stat-num {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a2f5e;
+        }
+        .eniso-stat-lbl {
+            font-size: 11px;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        /* Sidebar */
+        [data-testid="stSidebar"] {
+            background: white;
+            border-right: 0.5px solid #ccc;
+        }
+        [data-testid="stSidebar"] .stMarkdown p {
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Messages chat */
+        [data-testid="stChatMessage"] {
+            background: white;
+            border: 0.5px solid #ddd;
+            border-radius: 12px;
+            color: #111;
+        }
+
+        /* Input chat */
+        [data-testid="stChatInput"] {
+            border-top: 2px solid #4a9fd4;
+        }
+
+        /* Boutons */
         .stButton button {
             background-color: #1a2f5e;
             color: white;
             border-radius: 8px;
             border: none;
-            padding: 5px 15px;
         }
         .stButton button:hover {
             background-color: #4a9fd4;
+            color: white;
         }
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
+
+        /* Expander sources */
+        .streamlit-expanderHeader {
+            background: #e8f4fd;
+            color: #1a2f5e;
+            font-weight: 500;
+        }
+        .streamlit-expanderContent {
+            background: #f7fbff;
+            color: #111;
+        }
+
+        /* Footer */
+        .eniso-footer {
+            text-align: center;
+            color: #555;
+            font-size: 11px;
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 0.5px solid #ccc;
+        }
     </style>
     """, unsafe_allow_html=True)
 
 def show_header():
     st.markdown("""
     <div class="eniso-header">
-        <div class="eniso-logo-text">ENI<span>So</span></div>
-        <h1>🎓 Assistant Administratif Intelligent</h1>
-        <p>École Nationale d'Ingénieurs de Sousse — المدرسة الوطنية للمهندسين بسوسة</p>
-        <div class="lang-badges">
-            <span class="lang-badge">🇫🇷 Français</span>
-            <span class="lang-badge">🇸🇦 العربية</span>
-            <span class="lang-badge">🇬🇧 English</span>
-            <span class="lang-badge">🇪🇸 Español</span>
-            <span class="lang-badge">🇨🇳 中文</span>
-            <span class="lang-badge">🇷🇺 Русский</span>
+        <div class="eniso-header-top">
+            <div class="eniso-logo-circle">
+                <span class="eniso-logo-inner">ENISo</span>
+            </div>
+            <div class="eniso-header-titles">
+                <h1>🎓 Assistant Administratif Intelligent</h1>
+                <p>École Nationale d'Ingénieurs de Sousse — المدرسة الوطنية للمهندسين بسوسة</p>
+            </div>
+        </div>
+        <div class="eniso-lang-row">
+            <span class="eniso-lang-pill">🇫🇷 Français</span>
+            <span class="eniso-lang-pill">🇸🇦 العربية</span>
+            <span class="eniso-lang-pill">🇬🇧 English</span>
+            <span class="eniso-lang-pill">🇪🇸 Español</span>
+            <span class="eniso-lang-pill">🇨🇳 中文</span>
+            <span class="eniso-lang-pill">🇷🇺 Русский</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
 def show_stats(nb_docs=4):
     st.markdown(f"""
-    <div class="stats-bar">
-        <div class="stat-card">
-            <div class="number">{nb_docs}</div>
-            <div class="label">Documents indexés</div>
+    <div class="eniso-stats-row">
+        <div class="eniso-stat">
+            <div class="eniso-stat-num">{nb_docs}</div>
+            <div class="eniso-stat-lbl">Documents indexés</div>
         </div>
-        <div class="stat-card">
-            <div class="number">6+</div>
-            <div class="label">Langues supportées</div>
+        <div class="eniso-stat">
+            <div class="eniso-stat-num">6+</div>
+            <div class="eniso-stat-lbl">Langues supportées</div>
         </div>
-        <div class="stat-card">
-            <div class="number">24/7</div>
-            <div class="label">Disponibilité</div>
+        <div class="eniso-stat">
+            <div class="eniso-stat-num">24/7</div>
+            <div class="eniso-stat-lbl">Disponibilité</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
+
+def show_sidebar():
+    with st.sidebar:
+        st.markdown("### 🏛️ ENISo")
+        st.markdown("---")
+        st.markdown("**Navigation**")
+        st.markdown("💬 Chat")
+        st.markdown("📋 Inscription")
+        st.markdown("🏢 Stages")
+        st.markdown("🎓 PFE")
+        st.markdown("📅 Emploi du temps")
+        st.markdown("📞 Contacts")
+        st.markdown("---")
+        st.markdown("**À propos**")
+        st.markdown("Assistant IA basé sur RAG")
+        st.markdown("Modèle : LLaMA 3.3 70B")
+        st.markdown("Base : ChromaDB")
 
 def show_welcome_message():
     with st.chat_message("assistant"):
@@ -166,6 +230,13 @@ Je suis votre assistant administratif intelligent. Je peux vous aider sur :
 Posez votre question dans la langue de votre choix ! 🌍
         """)
 
+def show_sources(sources):
+    if sources:
+        with st.expander("📄 Sources utilisées"):
+            for i, doc in enumerate(sources):
+                st.markdown(f"**Extrait {i+1} :**")
+                st.info(doc.page_content)
+
 def show_footer():
     st.markdown("""
     <div class="eniso-footer">
@@ -173,10 +244,3 @@ def show_footer():
         Développé dans le cadre du projet pilote IA
     </div>
     """, unsafe_allow_html=True)
-
-def show_sources(sources):
-    if sources:
-        with st.expander("📄 Sources utilisées"):
-            for i, doc in enumerate(sources):
-                st.markdown(f"**Extrait {i+1} :**")
-                st.info(doc.page_content)
