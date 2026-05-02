@@ -14,5 +14,3 @@ __pycache__/
 # Cache HuggingFace
 .cache/
 
-# clé api GROQ
-GROQ_API_KEY="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"
