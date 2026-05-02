@@ -35,6 +35,31 @@ def load_css():
             gap: 14px;
             margin-bottom: 12px;
         }
+                /* Fix couleurs texte chat */
+        [data-testid="stChatMessage"] p {
+            color: #111 !important;
+        }
+        [data-testid="stChatMessage"] {
+            color: #111 !important;
+        }
+
+        /* Fix sidebar texte */
+        [data-testid="stSidebar"] * {
+            color: #333 !important;
+        }
+
+        /* Fix stats texte */
+        .eniso-stat-num { color: #1a2f5e !important; }
+        .eniso-stat-lbl { color: #555 !important; }
+
+        /* Fix footer */
+        .eniso-footer { color: #555 !important; }
+
+        /* Fix general text */
+        .stMarkdown p { color: #111 !important; }
+        .stMarkdown li { color: #111 !important; }
+                
+                
         .eniso-logo-circle {
             width: 65px;
             height: 65px;
