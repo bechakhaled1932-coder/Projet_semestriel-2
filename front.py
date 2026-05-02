@@ -32,21 +32,17 @@ def load_css():
             margin-bottom: 12px;
         }
         .eniso-logo-circle {
-            width: 52px;
-            height: 52px;
+             width: 60px;
+            height: 60px;
             background: white;
-            border-radius: 50%;
+             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+             padding: 4px;
         }
-        .eniso-logo-inner {
-            font-size: 12px;
-            font-weight: 700;
-            color: #1a2f5e;
-            letter-spacing: 1px;
-        }
+        
         .eniso-header-titles h1 {
             color: #ffffff;
             font-size: 20px;
