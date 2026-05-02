@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -10,11 +11,15 @@ from langchain_core.runnables import RunnablePassthrough
 load_dotenv()
 
 # === Configuration ===
-VECTORDB_DIR  = "vectordb"
-EMBED_MODEL   = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-import streamlit as st
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
+VECTORDB_DIR = "vectordb"
+EMBED_MODEL  = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
+def get_groq_key():
+    # Essayer d'abord les secrets Streamlit, puis .env
+    try:
+        return st.secrets["GROQ_API_KEY"]
+    except Exception:
+        return os.getenv("GROQ_API_KEY")
 
 # === Prompt ENISo ===
 PROMPT_TEMPLATE = """
@@ -52,7 +57,7 @@ def load_rag_chain():
 
     print("⏳ Chargement du LLM Groq...")
     llm = ChatGroq(
-        api_key=GROQ_API_KEY,
+        api_key=get_groq_key(),
         model_name="llama-3.3-70b-versatile",
         temperature=0
     )
