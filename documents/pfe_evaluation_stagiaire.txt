@@ -1,0 +1,35 @@
+FORMULAIRE ÉVALUATION DU STAGIAIRE EN PFE - ENISo
+FL02-DDS-ENISO, PFE-26
+
+=== IMPORTANT ===
+Ce formulaire est strictement confidentiel et ne doit en aucun cas être communiqué aux stagiaires.
+Il est destiné à l'encadreur entreprise uniquement.
+
+=== INFORMATIONS SUR L'ÉTUDIANT ===
+- Nom et prénom du candidat
+- Numéro d'inscription
+
+=== INFORMATIONS ENTREPRISE ===
+- Nom de l'entreprise
+- Prénom, nom et fonction de l'encadrant entreprise
+- Email et téléphone de l'encadrant
+- Participation à la soutenance : Oui / Non / Peut-être
+
+=== APPRÉCIATION GÉNÉRALE (note de 1 à 5) ===
+- Assiduité et ponctualité
+- Conduite et discipline
+- Intérêt accordé au stage
+- Appréciation globale
+
+=== ÉVALUATION DES COMPÉTENCES ACQUISES (note de 1 à 5) ===
+- CP1 : Gestion de projet technique
+- CP2 : Travail en équipe et interculturalité
+- CP3 : Adaptabilité et apprentissage continu
+- CP4 : Intégration des principes DD-RSE
+- CP5 : Communication écrite et orale
+- CP6 : Développement des soft skills (leadership, initiative, gestion du temps)
+
+=== BESOINS FUTURS EN STAGE ===
+- Nombre de sujets PFE proposés pour l'année prochaine
+- Nombre de sujets de stage d'été proposés
+- Remarques particulières

@@ -1,0 +1,33 @@
+FORMULAIRE AUTO-ÉVALUATION PFE - ENISo
+FL02-DDS-ENISO, PFE-26
+
+=== INFORMATIONS ÉTUDIANT ===
+Pour remplir ce formulaire, l'étudiant doit fournir :
+- Nom et prénom du candidat
+- Filière : Electronique Industrielle, Informatique Appliquée, Mécatronique, Télécoms Embarquées, Mécanique et productique
+- Option choisie
+- Numéro d'inscription
+- Téléphone et email du candidat
+
+=== INFORMATIONS ENTREPRISE ===
+- Nom de l'entreprise
+- Nom, prénom et fonction de l'encadrant entreprise
+
+=== DÉTAILS DU STAGE ===
+- Type de stage : PFE
+- Titre du projet
+
+=== APPRÉCIATION DE L'ÉTUDIANT (note de 1 à 5) ===
+L'étudiant évalue les critères suivants :
+- Durée du stage
+- Diversité des activités
+- Fréquence du travail
+- Concordance du stage avec la spécialité et la formation
+- Autonomie du travail
+- Disponibilité de l'encadreur entreprise
+- Disponibilité de l'encadreur pédagogique
+- Evaluation générale du stage
+
+=== PROCÉDURE ===
+Ce formulaire doit être rempli par l'étudiant à la fin de son stage PFE.
+Il est accessible via le portail ENISo.

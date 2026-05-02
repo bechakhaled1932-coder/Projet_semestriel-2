@@ -1,0 +1,39 @@
+FORMULAIRE STAGE D'ÉTÉ 2024-2025 - ENISo
+Direction des stages
+
+=== INFORMATIONS ÉTUDIANT ===
+Pour déposer une demande de stage d'été, l'étudiant doit fournir :
+- Nom et prénom
+- CIN ou Passeport
+- Date et lieu de naissance
+- Numéro d'inscription
+- Email actif
+- Filière : Electronique Industrielle, Informatique Appliquée, Mécatronique, Télécoms Embarquées, Mécanique et productique
+- Téléphone
+- Adresse personnelle
+
+=== INFORMATIONS ENTREPRISE ===
+- Nom et adresse de l'entreprise
+- Téléphone et fax de l'entreprise
+- Nom, prénom et email du responsable RH
+
+=== INFORMATIONS ENCADREUR ENTREPRISE ===
+- Nom, prénom et fonction de l'encadrant
+- Email et téléphone de l'encadrant
+
+=== DÉTAILS DU STAGE ===
+- Type de stage : Initiation / Académique / Ingénieur
+- Intitulé du stage
+- Durée du stage (en semaines) — la durée minimale est de 4 semaines
+- Durée hebdomadaire maximale : nombre d'heures par semaine
+- Présence effective minimale en jours
+- Programme du stage
+- Date de début et date de fin du stage
+- Stage en Tunisie ou à l'étranger (préciser le pays si étranger)
+
+=== DOCUMENTS À FOURNIR ===
+- Demande de stage / fiche entreprise signée (PDF, max 10MB, 2 fichiers maximum)
+
+=== PROCÉDURE ===
+Le formulaire de stage d'été doit être soumis à la Direction des stages de l'ENISo.
+Contact : stages@eniso.u-sousse.tn
