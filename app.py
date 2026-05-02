@@ -3,23 +3,22 @@ import glob
 import streamlit as st
 from ingest import load_documents, split_documents, create_vectordb
 from rag_pipeline import load_rag_chain, ask
-
-# === Configuration de la page ===
-st.set_page_config(
-    page_title="Assistant ENISo",
-    page_icon="🎓",
-    layout="centered"
+from front import (
+    set_page_config, load_css, show_header,
+    show_stats, show_welcome_message,
+    show_footer, show_sources
 )
 
-st.title("🎓 Assistant Administratif ENISo")
-st.caption("Posez vos questions sur les procédures administratives, stages, PFE et emplois du temps.")
+# === Config ===
+set_page_config()
+load_css()
+show_header()
 
-# === Ingestion automatique si vectordb vide ===
+# === Chargement RAG ===
 @st.cache_resource
 def setup():
     vectordb_dir = "vectordb"
     chroma_files = glob.glob(f"{vectordb_dir}/**/*", recursive=True)
-
     if not chroma_files:
         st.info("⏳ Initialisation de la base de connaissances...")
         docs = load_documents()
@@ -28,22 +27,34 @@ def setup():
         st.write(f"✂️ {len(chunks)} chunks créés")
         create_vectordb(chunks)
         st.success("✅ Base vectorielle créée !")
-
     chain, retriever = load_rag_chain()
     return chain, retriever
 
 chain, retriever = setup()
 
-# === Historique de conversation ===
+# === Stats ===
+show_stats(nb_docs=4)
+
+# === Historique ===
 if "messages" not in st.session_state:
     st.session_state.messages = []
+
+if not st.session_state.messages:
+    show_welcome_message()
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# === Zone de saisie ===
-if question := st.chat_input("Posez votre question..."):
+# === Reset ===
+col1, col2 = st.columns([5, 1])
+with col2:
+    if st.button("🗑️ Reset"):
+        st.session_state.messages = []
+        st.rerun()
+
+# === Chat ===
+if question := st.chat_input("Posez votre question... / اطرح سؤالك... / Ask your question..."):
 
     with st.chat_message("user"):
         st.markdown(question)
@@ -53,11 +64,9 @@ if question := st.chat_input("Posez votre question..."):
         with st.spinner("⏳ Recherche en cours..."):
             answer, sources = ask(chain, retriever, question)
         st.markdown(answer)
-
-        if sources:
-            with st.expander("📄 Sources utilisées"):
-                for i, doc in enumerate(sources):
-                    st.markdown(f"**Extrait {i+1} :**")
-                    st.info(doc.page_content)
+        show_sources(sources)
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
+
+# === Footer ===
+show_footer()
