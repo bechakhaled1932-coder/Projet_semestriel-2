@@ -158,7 +158,8 @@ def show_header():
     <div class="eniso-header">
         <div class="eniso-header-top">
             <div class="eniso-logo-circle">
-                <span class="eniso-logo-inner">ENISo</span>
+                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB3aWR0aD0iNTI5LjI1IgogICBoZWlnaHQ9IjU2My41OTM3NSIKICAgaWQ9InN2ZzIiCiAgIHZlcnNpb249IjEuMSI+" 
+                 width="52" height="52" style="object-fit:contain; border-radius:50%;"/>
             </div>
             <div class="eniso-header-titles">
                 <h1>🎓 Assistant Administratif Intelligent</h1>
