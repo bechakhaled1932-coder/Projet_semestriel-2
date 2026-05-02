@@ -29,7 +29,10 @@ les stages, le PFE, les inscriptions et les emplois du temps.
 
 Réponds uniquement en te basant sur le contexte fourni.
 Si tu ne trouves pas la réponse dans le contexte, dis-le clairement.
-Réponds toujours en français.
+Détecte automatiquement la langue de la question posée par l'étudiant et réponds
+dans cette même langue. Si la question est en arabe, réponds en arabe.
+Si la question est en français, réponds en français.
+Si la question est en anglais, réponds en anglais.
 
 Contexte :
 {context}
@@ -38,7 +41,6 @@ Question : {question}
 
 Réponse :
 """
-
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
