@@ -1,4 +1,5 @@
 import os
+import glob
 import streamlit as st
 from ingest import load_documents, split_documents, create_vectordb
 from rag_pipeline import load_rag_chain, ask
@@ -17,22 +18,26 @@ st.caption("Posez vos questions sur les procédures administratives, stages, PFE
 @st.cache_resource
 def setup():
     vectordb_dir = "vectordb"
-    if not os.path.exists(vectordb_dir) or not os.listdir(vectordb_dir):
+    chroma_files = glob.glob(f"{vectordb_dir}/**/*", recursive=True)
+
+    if not chroma_files:
         st.info("⏳ Initialisation de la base de connaissances...")
         docs = load_documents()
         st.write(f"📄 {len(docs)} documents chargés")
         chunks = split_documents(docs)
         st.write(f"✂️ {len(chunks)} chunks créés")
         create_vectordb(chunks)
-        st.write("✅ Base vectorielle créée")
+        st.success("✅ Base vectorielle créée !")
+
     chain, retriever = load_rag_chain()
     return chain, retriever
+
+chain, retriever = setup()
 
 # === Historique de conversation ===
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Afficher l'historique
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
