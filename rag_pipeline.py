@@ -7,6 +7,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
+from langdetect import detect
 
 load_dotenv()
 
@@ -103,6 +104,23 @@ def load_rag_chain():
 
 
 def ask(chain, retriever, question):
-    answer = chain.invoke(question)
+    try:
+        lang = detect(question)
+        lang_map = {
+            "en": "English",
+            "fr": "French / Français", 
+            "ar": "Arabic / العربية",
+            "es": "Spanish / Español",
+            "zh-cn": "Chinese / 中文",
+            "ru": "Russian / Русский",
+            "de": "German / Deutsch",
+            "it": "Italian / Italiano"
+        }
+        lang_name = lang_map.get(lang, "the same language as the question")
+        question_with_lang = f"[RESPOND ONLY IN {lang_name.upper()}] {question}"
+    except:
+        question_with_lang = question
+
+    answer = chain.invoke(question_with_lang)
     sources = retriever.invoke(question)
     return answer, sources
