@@ -233,7 +233,7 @@ def show_sources(sources):
 def show_footer():
     st.markdown("""
     <div class="eniso-footer">
-        🏛️ École Nationale d'Ingénieurs de Sousse — ENISo © 2025<br>
+        🏛️ École Nationale d'Ingénieurs de Sousse — ENISo © 2026<br>
         Développé dans le cadre du projet pilote IA
     </div>
     """, unsafe_allow_html=True)
