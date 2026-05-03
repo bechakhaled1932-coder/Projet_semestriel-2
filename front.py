@@ -19,6 +19,13 @@ def set_page_config():
 def load_css():
     st.markdown("""
     <style>
+        # Ajoutez ceci dans le bloc <style> de load_css()
+    [data-testid="stChatMessageContent"] p {
+        color: #111111 !important;
+    }
+    [data-testid="stChatMessageContent"] {
+        color: #111111 !important;
+    }
         .stApp { background-color: #f0f4f8; }
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
@@ -104,11 +111,23 @@ def load_css():
             font-size: 14px;
         }
         [data-testid="stChatMessage"] {
-            background: white;
-            border: 0.5px solid #ddd;
-            border-radius: 12px;
-            color: #111;
-        }
+    background: white;
+    border: 0.5px solid #ddd;
+    border-radius: 12px;
+    color: #111111 !important;
+}
+[data-testid="stChatMessageContent"] {
+    color: #111111 !important;
+}
+[data-testid="stChatMessageContent"] p {
+    color: #111111 !important;
+}
+[data-testid="stChatMessageContent"] li {
+    color: #111111 !important;
+}
+[data-testid="stChatMessageContent"] strong {
+    color: #111111 !important;
+}
         .stButton button {
             background-color: #1a2f5e;
             color: white;
