@@ -103,23 +103,54 @@ def load_rag_chain():
     return chain, retriever
 
 
-def ask(chain, retriever, question):
+from langdetect import detect
+
+ARABIC_LATIN = [
+    "marhaba", "ahlan", "salam", "sabah", "masa", "shukran",
+    "afwan", "inshallah", "yalla", "habibi", "kifak", "labas",
+    "wach", "bahi", "mlih", "chokran", "barak", "mabrook",
+    "tfadhal", "chwiya", "barcha", "tawa", "3andek", "9oulou",
+    "mouche", "famma", "haka", "hakka", "aychek", "yesser"
+]
+
+def detect_language(text):
+    text_lower = text.lower()
+
+    # Arabe en lettres arabes
+    if any("\u0600" <= c <= "\u06FF" for c in text):
+        return "Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"
+
+    # Arabe translittéré en latin
+    for word in ARABIC_LATIN:
+        if word in text_lower:
+            return "Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"
+
     try:
-        lang = detect(question)
+        lang = detect(text)
         lang_map = {
-            "en": "English",
-            "fr": "French / Français", 
-            "ar": "Arabic / العربية",
-            "es": "Spanish / Español",
-            "zh-cn": "Chinese / 中文",
-            "ru": "Russian / Русский",
-            "de": "German / Deutsch",
-            "it": "Italian / Italiano"
+            "en": ("English", "Respond only in English"),
+            "fr": ("French", "Réponds uniquement en français"),
+            "ar": ("Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"),
+            "es": ("Spanish", "Responde únicamente en español"),
+            "zh-cn": ("Chinese", "只用中文回答"),
+            "ru": ("Russian", "Отвечай только на русском языке"),
+            "de": ("German", "Antworte nur auf Deutsch"),
+            "it": ("Italian", "Rispondi solo in italiano"),
         }
-        lang_name = lang_map.get(lang, "the same language as the question")
-        question_with_lang = f"[RESPOND ONLY IN {lang_name.upper()}] {question}"
+        return lang_map.get(lang, ("English", "Respond only in English"))
     except:
-        question_with_lang = question
+        return "English", "Respond only in English"
+
+
+def ask(chain, retriever, question):
+    lang_name, lang_instruction = detect_language(question)
+
+    question_with_lang = f"""
+[LANGUAGE INSTRUCTION - CRITICAL]: {lang_instruction}
+[DO NOT USE ANY OTHER LANGUAGE]
+
+Question: {question}
+"""
 
     answer = chain.invoke(question_with_lang)
     sources = retriever.invoke(question)
