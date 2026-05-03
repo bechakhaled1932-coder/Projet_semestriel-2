@@ -24,9 +24,9 @@ def setup():
         docs = load_documents()
         st.write(f"📄 {len(docs)} documents chargés")
         chunks = split_documents(docs)
-        st.write(f"✂️ {len(chunks)} chunks créés")
+        st.write(f"✂️ {len(chunks)} chunks crées")
         create_vectordb(chunks)
-        st.success("✅ Base vectorielle créée !")
+        st.success("✅ Base vectorielle crée !")
     chain, retriever = load_rag_chain()
     return chain, retriever
 
