@@ -1,6 +1,6 @@
-import streamlit as st
 import base64
 import pathlib
+import streamlit as st
 
 def get_logo_base64():
     logo_path = pathlib.Path("assets/logo.svg")
@@ -35,41 +35,16 @@ def load_css():
             gap: 14px;
             margin-bottom: 12px;
         }
-                /* Fix couleurs texte chat */
-        [data-testid="stChatMessage"] p {
-            color: #111 !important;
-        }
-        [data-testid="stChatMessage"] {
-            color: #111 !important;
-        }
-
-        /* Fix sidebar texte */
-        [data-testid="stSidebar"] * {
-            color: #333 !important;
-        }
-
-        /* Fix stats texte */
-        .eniso-stat-num { color: #1a2f5e !important; }
-        .eniso-stat-lbl { color: #555 !important; }
-
-        /* Fix footer */
-        .eniso-footer { color: #555 !important; }
-
-        /* Fix general text */
-        .stMarkdown p { color: #111 !important; }
-        .stMarkdown li { color: #111 !important; }
-                
-                
         .eniso-logo-circle {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            padding: 5px;
+            padding: 4px;
         }
         .eniso-header-titles h1 {
             color: #ffffff;
@@ -134,9 +109,6 @@ def load_css():
             border-radius: 12px;
             color: #111;
         }
-        [data-testid="stChatInput"] {
-            border-top: 2px solid #4a9fd4;
-        }
         .stButton button {
             background-color: #1a2f5e;
             color: white;
@@ -170,7 +142,7 @@ def load_css():
 def show_header():
     logo_b64 = get_logo_base64()
     if logo_b64:
-        logo_html = f'<img src="data:image/svg+xml;base64,{logo_b64}" width="55" height="55" style="object-fit:contain;"/>'
+        logo_html = f'<img src="data:image/svg+xml;base64,{logo_b64}" width="52" height="52" style="object-fit:contain;"/>'
     else:
         logo_html = '<span style="font-size:12px;font-weight:700;color:#1a2f5e;">ENISo</span>'
 
