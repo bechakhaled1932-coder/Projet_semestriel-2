@@ -202,21 +202,26 @@ def show_sidebar():
         st.markdown("Assistant IA basé sur RAG")
         st.markdown("Modèle : LLaMA 3.3 70B")
         st.markdown("Base : ChromaDB")
-
 def show_welcome_message():
     with st.chat_message("assistant"):
         st.markdown("""
-👋 **Bonjour et bienvenue à l'ENISo !**
+<div style="color: #111111; font-size: 14px;">
+
+👋 <strong>Bonjour et bienvenue à l'ENISo !</strong>
 
 Je suis votre assistant administratif intelligent. Je peux vous aider sur :
-- 📋 Les **procédures d'inscription et réinscription**
-- 🏢 Les **stages d'été** et leur formulaire
-- 🎓 Le **PFE** (Projet de Fin d'Études)
-- 📅 Les **emplois du temps**
-- 📞 Les **contacts** des services
+<ul>
+<li>📋 Les <strong>procédures d'inscription et réinscription</strong></li>
+<li>🏢 Les <strong>stages d'été</strong> et leur formulaire</li>
+<li>🎓 Le <strong>PFE</strong> (Projet de Fin d'Études)</li>
+<li>📅 Les <strong>emplois du temps</strong></li>
+<li>📞 Les <strong>contacts</strong> des services</li>
+</ul>
 
 Posez votre question dans la langue de votre choix ! 🌍
-        """)
+
+</div>
+""", unsafe_allow_html=True)
 
 def show_sources(sources):
     if sources:
