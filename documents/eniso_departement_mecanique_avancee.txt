@@ -1,0 +1,85 @@
+=== DÉPARTEMENT MÉCANIQUE AVANCÉE (DMA) - ENISo ===
+
+== INFORMATIONS GÉNÉRALES ==
+
+Nom : Département Mécanique Avancée
+Date de création : 23 décembre 2009
+Chef de département : Moncef GHISS
+Emails : 
+- direction.dma@eniso.u-sousse.tn
+- moncef.ghiss@eniso.u-sousse.tn
+
+== MISSION ==
+
+Former des ingénieurs en mécatronique alliant mécanique, électronique, informatique et automatique. Approche intégrée pour former des profils polyvalents capables de concevoir, modéliser et piloter des systèmes intelligents et innovants.
+
+== FORMATIONS PROPOSÉES ==
+
+Formations d'ingénieur (2 filières) :
+1. Mécatronique
+2. Génie Mécanique & Productique
+
+Masters :
+- Master professionnel : Ingénierie Industrielle & Manufacturière (2IM)
+- Master de Technologie (Mastech) - en collaboration avec l'ENIM
+- Master de recherche : Mécanique et Ingénierie des Systèmes
+
+== LABORATOIRES DE TRAVAUX PRATIQUES ==
+
+1. Hall mécanique avec laboratoire de prototypage
+2. Centre de fabrication à commande numérique
+3. Laboratoire de caractérisations mécaniques
+4. Laboratoire de robotique
+5. Laboratoire de transmission de puissance
+
+== STAFF ENSEIGNANT ==
+
+Nombre total d'enseignants : 23
+
+Répartition par grade :
+- 5 Professeurs
+- 4 Maîtres de conférences
+- 9 Maîtres assistants
+- 2 Assistants
+- 3 Enseignants de langue
+
+== EXEMPLES D'ENSEIGNANTS ==
+
+| Nom | Email | Grade | Spécialité |
+|-----|-------|-------|-------------|
+| Abir ABDESSALEM | abir.abdessalem@yahoo.com | Maître Assistant contractuel | RDM (TP) |
+| Khaled BEN ABDALLAH | khaled.benabdallah@istls.u-sousse.tn | Vacataire | Supply chain Management |
+| Anis BEN FRADJ | anis.fredj97@gmail.com | Vacataire | Technologie de fabrication |
+| Mohamed Amin BEN HASSENA | mohamedamin.benhassena@eniso.u-sousse.tn | Maître Assistant | Mécanique analytique |
+| Kamel BERRIRI | Kamel.berriri@eniso.u-sousse.tn | Maître Assistant | Mathématiques de l'ingénieur |
+
+== PARTENARIATS & DOUBLES DIPLÔMES ==
+
+Doubles diplômes ingénieur + master via la filière Mécatronique :
+
+ECAM Bruxelles (Belgique)
+INP Grenoble (France)
+Polytech Clermont / Institut Français de Mécanique Avancée (France)
+
+== RECHERCHE & INNOVATION ==
+
+Laboratoire de recherche : LMS (Laboratoire de Mécanique de Sousse)
+- Premier laboratoire de l'ENISo (historique)
+
+Doctorat : Formation doctorale en Génie Mécanique
+
+== CONTACTS ==
+
+Département Mécanique Avancée - ENISo
+Chef de département : Moncef GHISS
+Email direction : direction.dma@eniso.u-sousse.tn
+Email personnel : moncef.ghiss@eniso.u-sousse.tn
+
+Pour les étudiants :
+- Renseignements sur la filière Mécatronique
+- Informations sur la filière Génie Mécanique & Productique
+- Demandes de doubles diplômes (Belgique, France)
+- Stages et PFE
+- Laboratoires (robotique, prototypage, CNC)
+- Masters (2IM, Mastech, recherche)
+- Doctorat en Génie Mécanique
