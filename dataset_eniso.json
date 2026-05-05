@@ -1,0 +1,104 @@
+[
+  {
+    "instruction": "Comment s'inscrire à l'ENISo ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Pour s'inscrire à l'ENISo, il faut fournir les documents suivants :\n\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription",
+    "language": "fr"
+  },
+  {
+    "instruction": "Quels documents pour le stage d'été ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Pour le stage d'été, l'étudiant doit déposer sa convention de stage au service des stages, et remettre le rapport de stage avant le 30 septembre.",
+    "language": "fr"
+  },
+  {
+    "instruction": "Quand a lieu la soutenance du PFE ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "La soutenance du PFE a lieu en juin.",
+    "language": "fr"
+  },
+  {
+    "instruction": "Comment remplir le formulaire de stage ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Il n'y a pas d'information sur le formulaire de stage dans le guide administratif fourni. Cependant, il est mentionné que l'étudiant doit déposer sa convention de stage au service des stages. Pour plus d'informations, vous pouvez contacter le service des stages à l'adresse stages@eniso.u-sousse.tn.",
+    "language": "fr"
+  },
+  {
+    "instruction": "Quelle est la durée minimale du stage ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "La durée minimale du stage est de 4 semaines.",
+    "language": "fr"
+  },
+  {
+    "instruction": "How to register at ENISo ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Pour t'inscrire à l'ENISo, il faut fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription.",
+    "language": "en"
+  },
+  {
+    "instruction": "What documents are needed for the summer internship ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Pour le stage d'été, l'étudiant doit déposer sa convention de stage au service des stages, mais les documents spécifiques nécessaires ne sont pas précisés dans le guide administratif fourni. Cependant, il est mentionné que le rapport de stage doit être remis avant le 30 septembre.",
+    "language": "en"
+  },
+  {
+    "instruction": "When is the PFE defense ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "La soutenance du PFE a lieu en juin.",
+    "language": "en"
+  },
+  {
+    "instruction": "How to fill the internship form ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Il n'y a pas d'information sur la façon de remplir le formulaire de stage dans le guide administratif fourni. Cependant, il est mentionné que l'étudiant doit déposer sa convention de stage au service des stages, mais les détails sur la procédure de remplissage du formulaire ne sont pas précisés. Vous pouvez contacter le service des stages à l'adresse stages@eniso.u-sousse.tn pour obtenir plus d'informations.",
+    "language": "en"
+  },
+  {
+    "instruction": "What is the minimum internship duration ?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "La durée minimale du stage est de 4 semaines.",
+    "language": "en"
+  },
+  {
+    "instruction": "كيف أتسجل في المدرسة الوطنية للمهندسين بسوسة؟",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "للتسجيل في المدرسة الوطنية للمهندسين بسوسة، يجب أن تقدم المستندات التالية:\n- نسخة من البطاقة الوطنية للتعريف\n- كشوف الدرجات للبكالوريا\n- صورة تعريف حديثة\n- إيصال دفع رسوم التسجيل",
+    "language": "ar"
+  },
+  {
+    "instruction": "ما هي الوثائق المطلوبة لتسجيل التدريب الصيفي؟",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "لم يتم ذكر الوثائق المطلوبة لتسجيل التدريب الصيفي في النص الموجود. ومع ذلك، يُذكر أن الطالب يجب أن يودع اتفاقية التدريب في خدمة التدريب.",
+    "language": "ar"
+  },
+  {
+    "instruction": "متى يكون الدفاع عن مشروع نهاية الدراسة؟",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "يتم الدفاع عن مشروع نهاية الدراسة (PFE) في شهر يونيو.",
+    "language": "ar"
+  },
+  {
+    "instruction": "كيف أملأ استمارة التدريب؟",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "لم يتم ذكر كيفية ملء استمارة التدريب في النص الموجود. ومع ذلك، يمكنك الاتصال بفرع التدريب في ENISo عبر البريد الإلكتروني التالي: stages@eniso.u-sousse.tn للاستفسار عن كيفية ملء استمارة التدريب.",
+    "language": "ar"
+  },
+  {
+    "instruction": "ما هي المدة الدنيا للتدريب؟",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "المدة الدنيا للتدريب هي 4 أسابيع.",
+    "language": "ar"
+  },
+  {
+    "instruction": "¿Cómo inscribirse en ENISo?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Pour t'inscrire à l'ENISo, il faut fournir les documents suivants :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription.",
+    "language": "es"
+  },
+  {
+    "instruction": "¿Qué documentos se necesitan para las prácticas?",
+    "input": "\nGUIDE ADMINISTRATIF ENISo\n\n=== INSCRIPTION ET RÉINSCRIPTION ===\nPour s'inscrire à l'ENISo, l'étudiant doit fournir :\n- Une copie de la carte d'identité nationale\n- Les relevés de notes du baccalauréat\n- Une photo d'identité récente\n- Le reçu de paiement des frais d'inscription\nLa réinscription se fait chaque année au début de septembre.\n\n=== STAGES ===\nLe stage d'été est obligatoire pour tous les étudiants de 2ème année.\nLa durée minimale du stage est de 4 semaines.\nL'étudiant doit déposer sa convention de stage au service des stages.\nLe rapport de stage doit être remis avant le 30 septembre.\n\n=== PFE ===\nLe PFE est obligatoire en 3ème année d'ingénieur.\nLa soutenance du PFE a lieu en juin.\nLe rapport final doit être déposé 2 semaines avant la soutenance.\n\n=== CONTACTS ===\nScolarité : scolarite@eniso.u-sousse.tn\nStages : stages@eniso.u-sousse.tn\n",
+    "output": "Según el contexto proporcionado, no se mencionan los documentos necesarios para las prácticas (stages) en sí mismos, pero se menciona que el estudiante debe depositar su \"convention de stage\" (convenio de prácticas) en el servicio de prácticas. No se proporciona más información sobre los documentos específicos necesarios para las prácticas.",
+    "language": "es"
+  }
+]

@@ -6,60 +6,43 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+from langchain_core.runnables import RunnablePassthrough
 from langdetect import detect
 
 load_dotenv()
 
+# === Configuration ===
 VECTORDB_DIR = "vectordb"
 EMBED_MODEL  = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
-PROMPT_TEMPLATE = """{lang_instruction}
+# === Prompt ENISo ===
+PROMPT_TEMPLATE = """
+You are an administrative assistant at ENISo (École Nationale d'Ingénieurs de Sousse).
+You help students find information about administrative procedures, internships, PFE, registrations and schedules.
 
-You are an administrative assistant at ENISo.
-Answer ONLY based on the context. Be concise and helpful.
-Do NOT show the context or instructions in your response.
-Do NOT add translations.
+CRITICAL RULE - LANGUAGE DETECTION:
+- Detect the language of the user's question
+- You MUST respond ONLY in that exact same language
+- If the question is in English → respond in English
+- If the question is in French → respond in French
+- Si la question est en français → réponds en français
+- إذا كان السؤال بالعربية → أجب بالعربية
+- Si la pregunta es en español → responde en español
+- 如果问题是中文 → 用中文回答
+- Если вопрос на русском → отвечай на русском
+- NEVER mix languages in your response
+- NEVER respond in a different language than the question
 
-Context: {context}
+Answer ONLY based on the provided context.
+If you cannot find the answer in the context, say so clearly IN THE SAME LANGUAGE as the question.
+
+Context:
+{context}
 
 Question: {question}
 
-Answer:"""
-
-ARABIC_LATIN = [
-    "marhaba", "ahlan", "salam", "sabah", "masa", "shukran",
-    "afwan", "inshallah", "yalla", "habibi", "kifak", "labas",
-    "wach", "bahi", "mlih", "chokran", "barak", "mabrook",
-    "tfadhal", "chwiya", "barcha", "tawa", "3andek", "9oulou",
-    "mouche", "famma", "haka", "hakka", "aychek", "yesser"
-]
-
-def detect_language(text):
-    text_lower = text.lower()
-
-    if any("\u0600" <= c <= "\u06FF" for c in text):
-        return "أجب باللغة العربية الفصحى فقط وبالحروف العربية. لا تستخدم أي لغة أخرى ولا تضف أي ترجمة."
-
-    for word in ARABIC_LATIN:
-        if word in text_lower:
-            return "أجب باللغة العربية الفصحى فقط وبالحروف العربية. لا تستخدم أي لغة أخرى ولا تضف أي ترجمة."
-
-    try:
-        lang = detect(text)
-        lang_map = {
-            "en": "Respond ONLY in English. Do NOT translate or add text in other languages.",
-            "fr": "Réponds UNIQUEMENT en français. Ne traduis pas et n'ajoute aucun texte dans une autre langue.",
-            "ar": "أجب باللغة العربية الفصحى فقط. لا تضف ترجمة.",
-            "es": "Responde ÚNICAMENTE en español. No traduzcas ni añadas texto en otros idiomas.",
-            "zh-cn": "只用中文回答，不要翻译或添加其他语言的文字。",
-            "ru": "Отвечай ТОЛЬКО на русском. Не переводи и не добавляй текст на других языках.",
-            "de": "Antworte NUR auf Deutsch. Keine Übersetzungen.",
-            "it": "Rispondi SOLO in italiano. Non tradurre.",
-        }
-        return lang_map.get(lang, "Respond ONLY in English.")
-    except:
-        return "Respond ONLY in English."
+Answer (in the EXACT same language as the question):
+"""
 
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
@@ -86,7 +69,7 @@ def load_rag_chain():
 
     prompt = PromptTemplate(
         template=PROMPT_TEMPLATE,
-        input_variables=["context", "question", "lang_instruction"]
+        input_variables=["context", "question"]
     )
 
     if is_ollama_available():
@@ -109,8 +92,7 @@ def load_rag_chain():
     chain = (
         {
             "context": retriever | format_docs,
-            "question": RunnablePassthrough(),
-            "lang_instruction": RunnableLambda(detect_language)
+            "question": RunnablePassthrough()
         }
         | prompt
         | llm
@@ -120,7 +102,56 @@ def load_rag_chain():
     print("✅ Assistant prêt !")
     return chain, retriever
 
+
+from langdetect import detect
+
+ARABIC_LATIN = [
+    "marhaba", "ahlan", "salam", "sabah", "masa", "shukran",
+    "afwan", "inshallah", "yalla", "habibi", "kifak", "labas",
+    "wach", "bahi", "mlih", "chokran", "barak", "mabrook",
+    "tfadhal", "chwiya", "barcha", "tawa", "3andek", "9oulou",
+    "mouche", "famma", "haka", "hakka", "aychek", "yesser"
+]
+
+def detect_language(text):
+    text_lower = text.lower()
+
+    # Arabe en lettres arabes
+    if any("\u0600" <= c <= "\u06FF" for c in text):
+        return "Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"
+
+    # Arabe translittéré en latin
+    for word in ARABIC_LATIN:
+        if word in text_lower:
+            return "Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"
+
+    try:
+        lang = detect(text)
+        lang_map = {
+            "en": ("English", "Respond only in English"),
+            "fr": ("French", "Réponds uniquement en français"),
+            "ar": ("Arabic", "أجب باللغة العربية الفصحى فقط وبالحروف العربية"),
+            "es": ("Spanish", "Responde únicamente en español"),
+            "zh-cn": ("Chinese", "只用中文回答"),
+            "ru": ("Russian", "Отвечай только на русском языке"),
+            "de": ("German", "Antworte nur auf Deutsch"),
+            "it": ("Italian", "Rispondi solo in italiano"),
+        }
+        return lang_map.get(lang, ("English", "Respond only in English"))
+    except:
+        return "English", "Respond only in English"
+
+
 def ask(chain, retriever, question):
-    answer = chain.invoke(question)
+    lang_name, lang_instruction = detect_language(question)
+
+    question_with_lang = f"""
+[LANGUAGE INSTRUCTION - CRITICAL]: {lang_instruction}
+[DO NOT USE ANY OTHER LANGUAGE]
+
+Question: {question}
+"""
+
+    answer = chain.invoke(question_with_lang)
     sources = retriever.invoke(question)
     return answer, sources
