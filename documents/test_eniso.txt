@@ -29,6 +29,7 @@ Les séances de TD durent 1h30.
 Les séances de TP durent 3h00.
 
 === CONTACTS UTILES ===
-Scolarité : scolarite@eniso.u-sousse.tn
-Stages : stages@eniso.u-sousse.tn
-Direction : direction@eniso.u-sousse.tn
+Site officiel : https://eniso.rnu.tn/
+Scolarité : scolarite@eniso.rnu.tn
+Stages : stages@eniso.rnu.tn
+Direction : direction@eniso.rnu.tn
