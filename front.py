@@ -111,14 +111,14 @@ def load_css():
             font-size: 14px;
         }
         [data-testid="stChatMessage"] {
-    background: white;
-    border: 0.5px solid #ddd;
-    border-radius: 12px;
-    color: #111111 !important;
-}
-[data-testid="stChatMessageContent"] {
-    color: #111111 !important;
-}
+            background: white;
+            border: 0.5px solid #ddd;
+            border-radius: 12px;
+            color: #111111 !important;
+        }
+        [data-testid="stChatMessageContent"] {
+            color: #111111 !important;
+        }
 [data-testid="stChatMessageContent"] p {
     color: #111111 !important;
 }
@@ -147,6 +147,33 @@ def load_css():
             background: #f7fbff;
             color: #111;
         }
+                
+                /* Stats sidebar */
+[data-testid="stMetricValue"] {
+    color: #1a2f5e !important;
+    font-weight: 700 !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+[data-testid="stSidebarContent"] {
+    color: #333333 !important;
+}
+[data-testid="stSidebarContent"] p {
+    color: #333333 !important;
+}
+[data-testid="stSidebarContent"] h1,
+[data-testid="stSidebarContent"] h2,
+[data-testid="stSidebarContent"] h3 {
+    color: #1a2f5e !important;
+}
+/* Feedback buttons */
+.stButton button {
+    color: #111111 !important;
+    background-color: #f0f4f8 !important;
+    border: 1px solid #4a9fd4 !important;
+}
         .eniso-footer {
             text-align: center;
             color: #555;
