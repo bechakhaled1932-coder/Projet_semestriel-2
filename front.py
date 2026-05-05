@@ -19,13 +19,13 @@ def set_page_config():
 def load_css():
     st.markdown("""
     <style>
-        # Ajoutez ceci dans le bloc <style> de load_css()
-    [data-testid="stChatMessageContent"] p {
-        color: #111111 !important;
-    }
-    [data-testid="stChatMessageContent"] {
-        color: #111111 !important;
-    }
+        /* Correction : commentaire CSS valide */
+        [data-testid="stChatMessageContent"] p {
+            color: #111111 !important;
+        }
+        [data-testid="stChatMessageContent"] {
+            color: #111111 !important;
+        }
         .stApp { background-color: #f0f4f8; }
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
@@ -68,6 +68,7 @@ def load_css():
             display: flex;
             gap: 6px;
             flex-wrap: wrap;
+            margin-top: 8px;
         }
         .eniso-lang-pill {
             background: rgba(255,255,255,0.15);
@@ -76,6 +77,15 @@ def load_css():
             padding: 3px 9px;
             border-radius: 20px;
             border: 0.5px solid rgba(255,255,255,0.35);
+        }
+        .eniso-mode-badge {
+            background: #4a9fd4;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 10px;
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: normal;
         }
         .eniso-stats-row {
             display: grid;
@@ -119,15 +129,12 @@ def load_css():
         [data-testid="stChatMessageContent"] {
             color: #111111 !important;
         }
-[data-testid="stChatMessageContent"] p {
-    color: #111111 !important;
-}
-[data-testid="stChatMessageContent"] li {
-    color: #111111 !important;
-}
-[data-testid="stChatMessageContent"] strong {
-    color: #111111 !important;
-}
+        [data-testid="stChatMessageContent"] p {
+            color: #111111 !important;
+        }
+        [data-testid="stChatMessageContent"] li {
+            color: #111111 !important;
+        }
         .stButton button {
             background-color: #1a2f5e;
             color: white;
@@ -147,33 +154,14 @@ def load_css():
             background: #f7fbff;
             color: #111;
         }
-                
-                /* Stats sidebar */
-[data-testid="stMetricValue"] {
-    color: #1a2f5e !important;
-    font-weight: 700 !important;
-}
-[data-testid="stMetricLabel"] {
-    color: #333333 !important;
-    font-weight: 500 !important;
-}
-[data-testid="stSidebarContent"] {
-    color: #333333 !important;
-}
-[data-testid="stSidebarContent"] p {
-    color: #333333 !important;
-}
-[data-testid="stSidebarContent"] h1,
-[data-testid="stSidebarContent"] h2,
-[data-testid="stSidebarContent"] h3 {
-    color: #1a2f5e !important;
-}
-/* Feedback buttons */
-.stButton button {
-    color: #111111 !important;
-    background-color: #f0f4f8 !important;
-    border: 1px solid #4a9fd4 !important;
-}
+        [data-testid="stMetricValue"] {
+            color: #1a2f5e !important;
+            font-weight: 700 !important;
+        }
+        [data-testid="stMetricLabel"] {
+            color: #333333 !important;
+            font-weight: 500 !important;
+        }
         .eniso-footer {
             text-align: center;
             color: #555;
@@ -185,7 +173,7 @@ def load_css():
     </style>
     """, unsafe_allow_html=True)
 
-def show_header():
+def show_header(mode="☁️ Groq"):
     logo_b64 = get_logo_base64()
     if logo_b64:
         logo_html = f'<img src="data:image/svg+xml;base64,{logo_b64}" width="52" height="52" style="object-fit:contain;"/>'
@@ -199,7 +187,7 @@ def show_header():
                 {logo_html}
             </div>
             <div class="eniso-header-titles">
-                <h1>🎓 Assistant Administratif Intelligent</h1>
+                <h1>🎓 Assistant Administratif Intelligent <span class="eniso-mode-badge">{mode}</span></h1>
                 <p>École Nationale d'Ingénieurs de Sousse — المدرسة الوطنية للمهندسين بسوسة</p>
             </div>
         </div>
@@ -214,16 +202,39 @@ def show_header():
     </div>
     """, unsafe_allow_html=True)
 
-def show_stats(nb_docs=4):
+def get_real_stats():
+    """Retourne les stats réelles : nb_docs, nb_langues, mode"""
+    import glob
+    # Compter les chunks dans ChromaDB
+    chroma_files = glob.glob("vectordb/**/*.parquet", recursive=True)
+    nb_docs = len(chroma_files) if chroma_files else 0
+    if nb_docs == 0:
+        nb_docs = 4  # fallback
+    
+    # Compter les langues dans l'historique
+    if "messages" in st.session_state:
+        from rag_pipeline import detect_language
+        langues_vues = set()
+        for msg in st.session_state.messages:
+            if msg["role"] == "user":
+                lang_name, _ = detect_language(msg["content"])
+                langues_vues.add(lang_name)
+        nb_langues = len(langues_vues) if langues_vues else 6
+    else:
+        nb_langues = 6
+    
+    return nb_docs, nb_langues
+
+def show_stats(nb_docs=4, nb_langues=6):
     st.markdown(f"""
     <div class="eniso-stats-row">
         <div class="eniso-stat">
             <div class="eniso-stat-num">{nb_docs}</div>
-            <div class="eniso-stat-lbl">Documents indexés</div>
+            <div class="eniso-stat-lbl">Chunks indexés</div>
         </div>
         <div class="eniso-stat">
-            <div class="eniso-stat-num">6+</div>
-            <div class="eniso-stat-lbl">Langues supportées</div>
+            <div class="eniso-stat-num">{nb_langues}</div>
+            <div class="eniso-stat-lbl">Langues utilisées</div>
         </div>
         <div class="eniso-stat">
             <div class="eniso-stat-num">24/7</div>
@@ -246,8 +257,8 @@ def show_sidebar():
         st.markdown("---")
         st.markdown("**À propos**")
         st.markdown("Assistant IA basé sur RAG")
-        st.markdown("Modèle : LLaMA 3.3 70B")
         st.markdown("Base : ChromaDB")
+
 def show_welcome_message():
     with st.chat_message("assistant"):
         st.markdown("""
@@ -273,8 +284,11 @@ def show_sources(sources):
     if sources:
         with st.expander("📄 Sources utilisées"):
             for i, doc in enumerate(sources):
-                st.markdown(f"**Extrait {i+1} :**")
-                st.info(doc.page_content)
+                # Tronquer l'extrait à 300 caractères
+                content = doc.page_content[:300] + "..." if len(doc.page_content) > 300 else doc.page_content
+                source_file = doc.metadata.get("source", "Document inconnu")
+                st.markdown(f"**Extrait {i+1} :** *(source: {source_file})*")
+                st.info(content)
 
 def show_footer():
     st.markdown("""
