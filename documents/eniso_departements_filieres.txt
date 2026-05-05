@@ -1,0 +1,93 @@
+=== DÉPARTEMENTS ET FILIÈRES À L'ENISo ===
+
+L'École Nationale d'Ingénieurs de Sousse (ENISo) compte 3 départements, répartis en 6 filières :
+
+---
+
+== 1. DÉPARTEMENT INFORMATIQUE INDUSTRIEL ==
+
+Chef de département : (à préciser)
+Bureau : (à préciser)
+Email : (à préciser)
+
+Filières :
+
+🔹 GTE (Génie Télécom Embarqué)
+- Niveau : Diplôme d'ingénieur
+- Objectif : systèmes embarqués, télécommunications, IoT
+- Débouchés : ingénieur télécom, architecte systèmes embarqués
+
+🔹 IA (Génie Informatique Appliquée)
+- Niveau : Diplôme d'ingénieur
+- Objectif : intelligence artificielle, data science, développement logiciel
+- Débouchés : ingénieur IA, data scientist, développeur full-stack
+
+---
+
+== 2. DÉPARTEMENT MÉCANIQUE AVANCÉE ==
+
+Chef de département : (à préciser)
+Bureau : (à préciser)
+Email : (à préciser)
+
+Filières :
+
+🔹 Génie Mécatronique
+- Niveau : Diplôme d'ingénieur
+- Objectif : robotique, automatismes, systèmes mécatroniques
+- Débouchés : ingénieur mécatronicien, automaticien, roboticien
+
+🔹 Génie Mécanique et Productique
+- Niveau : Diplôme d'ingénieur
+- Objectif : conception mécanique, fabrication, productique
+- Débouchés : ingénieur mécanique, responsable production, concepteur CAO
+
+---
+
+== 3. DÉPARTEMENT ÉLECTRONIQUE INDUSTRIEL ==
+
+Chef de département : (à préciser)
+Bureau : (à préciser)
+Email : (à préciser)
+
+Filières :
+
+🔹 Électronique Industrielle
+- Niveau : Diplôme d'ingénieur
+- Objectif : électronique de puissance, instrumentation, systèmes industriels
+- Débouchés : ingénieur électronique, automaticien, responsable maintenance
+
+🔹 Automotive Software Engineering (Nouvelle filière)
+- Niveau : Diplôme d'ingénieur
+- Création : 2025-2026
+- Première promotion : 2025-2026
+- Objectif : logiciels embarqués pour l'automobile, systèmes ADAS, véhicules connectés
+- Débouchés : ingénieur logiciel embarqué, architecte système automobile, développeur ADAS
+- Particularité : filière innovante en partenariat avec l'industrie automobile
+
+---
+
+== STATISTIQUES CLÉS ==
+
+- Nombre total de départements : 3
+- Nombre total de filières : 6
+- Nouveauté : Automotive Software Engineering (rentrée 2025-2026)
+- Régime : Formation d'ingénieur (cycle préparatoire intégré ? à confirmer)
+
+== POUR LES ÉTUDIANTS ==
+
+Les étudiants peuvent demander des informations sur :
+- Les programmes de chaque filière
+- Les débouchés professionnels
+- Les projets de fin d'études (PFE) par département
+- Les stages par filière
+- Les contacts des chefs de département
+- Les conditions d'admission en 1ère année
+
+== À COMPLÉTER AVEC LE SITE OFFICIEL ==
+
+- Noms des chefs de département
+- Emails et numéros de téléphone
+- Horaires de permanence
+- Liens vers les programmes détaillés
+- Conditions d'accès à chaque filière

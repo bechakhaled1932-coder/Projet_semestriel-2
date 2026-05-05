@@ -1,0 +1,100 @@
+=== DÉPARTEMENT ÉLECTRONIQUE INDUSTRIELLE (EI) - ENISo ===
+
+== INFORMATIONS GÉNÉRALES ==
+
+Nom : Département Électronique Industrielle
+Date de création : 23 décembre 2009
+Chef de département : Mme Hajer CHTIOUI
+Email : hajer.chtioui@eniso.u-sousse.tn
+
+== MISSION ==
+
+Former des ingénieurs compétents en électronique industrielle, automatisation, systèmes embarqués et commande des machines, à travers une formation pluridisciplinaire orientée vers l'innovation.
+
+== FORMATIONS PROPOSÉES ==
+
+Formations d'ingénieur (2 filières) :
+1. Électronique Industrielle (EI)
+2. Automotive Software Engineering (ASE) / Ingénierie Logicielle Automobile
+
+Master de recherche :
+- Mastère de recherche en Techniques Avancées en Génie Électrique (TAGE)
+
+== LABORATOIRES DE TRAVAUX PRATIQUES (9 labos) ==
+
+1. Laboratoire Énergie renouvelable et schémas électriques
+2. Laboratoire Électrotechnique et Machines électriques
+3. Laboratoire Électronique Analogique et numérique
+4. Laboratoire Régulation industrielle et Automates programmables industriels
+5. Laboratoire Systèmes embarqués
+6. Laboratoire Mesure et instrumentation
+7. Laboratoire Compatibilité électromagnétique
+8. Laboratoire Conception CMS/CAO
+9. Laboratoire Développement logiciel et matériel pour l'automobile
+
+== STAFF ENSEIGNANT ==
+
+Nombre total d'enseignants : 34 enseignants-chercheurs
+
+Répartition par grade :
+- 4 Professeurs
+- 5 Maîtres de conférences
+- 21 Maîtres assistants
+- 1 Assistant
+- + Vacataires (ex: Ines Baccouche)
+
+== EXEMPLES D'ENSEIGNANTS ==
+
+| Nom | Email | Grade | Spécialité |
+|-----|-------|-------|-------------|
+| Hanen AKKARI | hanen.bettaieb@gmail.com | Maître Assistant | Traitement de signal |
+| Ines BACCOUCHE | ines.baccouche@hotmail.fr | Vacataire | Operating Systems |
+| Ihsen BEN HENIA | ihsen.benhnia@eniso.u-sousse.tn | Maître Assistant | Électronique Analogique |
+| Asma BEN RHOUMA | asma.benrhouma@yahoo.fr | Maître de conférences | Fonction électronique |
+| Anis BEN SLIMENE | bslimanea@yahoo.fr | Maître Assistant | Électronique Analogique |
+
+== DOUBLES DIPLÔMES & ÉCHANGES INTERNATIONAUX ==
+
+France :
+- ESIGELEC de Rouen
+- ESISAR de Grenoble INP
+- ENSIP de Poitiers
+
+Allemagne :
+- Deggendorf Institute of Technology
+
+Étudiants concernés : les deux filières (Électronique Industrielle et Automotive Software Engineering)
+
+== RECHERCHE & INNOVATION ==
+
+Laboratoire de recherche : LATIS (Laboratory of Advanced Technology and Intelligent Systems)
+
+Doctorat : Formation doctorale en Génie Électrique
+
+Axes de recherche (4 axes) :
+1. Vision par ordinateur et intelligence artificielle
+2. Analyse et traitement de documents
+3. Compatibilité électromagnétique et sûreté de fonctionnement
+4. Énergies renouvelables et réseaux intelligents (Smart Grid)
+
+== AUTOMOTIVE SOFTWARE ENGINEERING (ASE) ==
+
+C'est une nouvelle filière qui forme des ingénieurs spécialisés dans :
+- Développement logiciel pour l'automobile
+- Systèmes embarqués embarqués
+- Véhicules connectés et autonomes
+- ADAS (Advanced Driver Assistance Systems)
+
+== CONTACTS ==
+
+Département Électronique Industrielle - ENISo
+Chef de département : Hajer CHTIOUI
+Email : hajer.chtioui@eniso.u-sousse.tn
+
+Pour les étudiants :
+- Renseignements sur la filière Électronique Industrielle
+- Informations sur la nouvelle filière Automotive Software Engineering
+- Demandes de doubles diplômes (France, Allemagne)
+- Stages et PFE
+- Laboratoires et travaux pratiques
+- Master TAGE et Doctorat
